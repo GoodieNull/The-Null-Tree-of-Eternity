@@ -1,6 +1,6 @@
 let modInfo = {
 	name: "The Null Tree",
-	id: "https://raw.githack.com/GoodieNull/The-Null-Tree-of-Eternity/master/index.html",
+	id: "mymod",
 	author: "Null",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
