@@ -29,9 +29,9 @@ addLayer("s", {
     layerShown(){return true},
     upgrades: {
         11: {
-            title: "The Beginning",
-            description: "Multiplying points each superpoint (PPS = 2*S*0.5)",
+            title: "Normality",
+            description: "Point gain is multiplied by superpoints/2*2.",
             cost: new Decimal(1),
-        }
-    }
+        },
+    },
 })
