@@ -7,6 +7,13 @@ addLayer("s", {
         unlocked: true,
 		points: new Decimal(0),
     }},
+    upgrades: {
+        12: {
+            title: "The Beginning",
+            description: "Multiplying points each superpoint (PPS = 2*S*0.5)",
+            cost: new Decimal(1),
+        }
+    },
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "superpoints", // Name of prestige currency
