@@ -8,7 +8,7 @@ addLayer("s", {
 		points: new Decimal(0),
     }},
     upgrades: {
-        12: {
+        11: {
             title: "The Beginning",
             description: "Multiplying points each superpoint (PPS = 2*S*0.5)",
             cost: new Decimal(1),
