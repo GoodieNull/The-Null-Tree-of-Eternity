@@ -33,6 +33,8 @@ addLayer("p", {
     position: 10, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     name: "prestige",
     startData() { return {
+        unlocked: false,
+        if: superpoints >= 2,
         unlocked: true,
 		points: new Decimal(0),
     }},
