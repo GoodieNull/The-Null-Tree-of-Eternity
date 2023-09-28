@@ -26,6 +26,12 @@ addLayer("s", {
     hotkeys: [
         {key: "S", description: "S: Reset for superpoints", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
-    
+    layerShown(){return true},
+    upgrades: {
+        11: {
+            title: "Normality",
+            description: "Point gain is multiplied by superpoints/2*2.",
+            cost: new Decimal(1),
+        },
+    }
 })
