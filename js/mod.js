@@ -1,6 +1,6 @@
 let modInfo = {
 	name: "The Null Tree",
-	id: "5de27d2b223a53261d128d1947e3cc6b54c20543",
+	id: "https://raw.githack.com/GoodieNull/The-Null-Tree-of-Eternity/master/index.html",
 	author: "Null",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "Release",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
