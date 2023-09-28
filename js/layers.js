@@ -35,15 +35,15 @@ addLayer("p", {
     startData() { return {
         unlocked: false,
         if: superpoints >= 2,
-        unlocked: true,
+            unlocked: true,
 		points: new Decimal(0),
     }},
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "prestige", // Name of prestige currency
-    baseResource: "superpoints", // Name of resource prestige is based on
+    baseResource: "prestige", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
-    type: 5, // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
@@ -52,7 +52,7 @@ addLayer("p", {
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
     },
-    row: 0, // Row the layer is in on the tree (0 is the first row)
+    row: 1, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
         {key: "P", description: "P: Reset for prestige", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
