@@ -1,5 +1,5 @@
 let modInfo = {
-	name: "The ??? Tree",
+	name: "The Null Tree",
 	id: "mymod",
 	author: "nobody",
 	pointsName: "points",
@@ -52,11 +52,12 @@ function addedPlayerData() { return {
 
 // Display extra things at the top of the page
 var displayThings = [
+	displayThings, "Null Tree"
 ]
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("e1024500000"))
 }
 
 
@@ -65,7 +66,7 @@ function isEndgame() {
 
 // Style for the background, can be a function
 var backgroundStyle = {
-
+backgroundStyle: "red"
 }
 
 // You can change this if you have things that can be messed up by long tick lengths
