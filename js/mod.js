@@ -43,7 +43,11 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	if (hasUpgrade('s', 11)) gain = gain.divide(2)*("s".add(1).times(2))
+	if (hasUpgrade('s', 11))     
+	effect(); {
+        return player[this.layer].points.add(1).pow(0.5)
+    }
+    effectDisplay(); { return format(upgradeEffect(this.layer, this.id))+"s" } // Add formatting to the effect
 	return gain
 }
 
