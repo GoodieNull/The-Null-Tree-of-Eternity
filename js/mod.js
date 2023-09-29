@@ -43,7 +43,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	let effect = gain.times
+	let effect = gain.times(effect)
     if (hasUpgrade('s', 11)) gain = gain.times(1.5)
 	effect(); {
         return player[this.layer].points.add(1).pow(0.5)
