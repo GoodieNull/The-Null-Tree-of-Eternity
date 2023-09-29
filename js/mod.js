@@ -43,13 +43,12 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	let effect = gain.times(effect)
     if (hasUpgrade('s', 11)) gain = gain.times(1.5)
 	effect(); {
         return player[this.layer].points.add(1).pow(0.5)
     }
     effectDisplay(); { return format(upgradeEffect(this.layer, this.id))+"superpoints" } // Add formatting to the effect
-	if (hasUpgrade('p', 12)) gain = gain.times(upgradeEffect('p', 12))
+	if (hasUpgrade('s', 12)) gain = gain.times(upgradeEffect('s', 12))
 	return gain
 }
 
@@ -73,7 +72,7 @@ function isEndgame() {
 
 // Style for the background, can be a function
 var backgroundStyle = {
-	color: "#FFFFFF"
+	backgroundStyle: "#FFFFFF"
 }
 
 // You can change this if you have things that can be messed up by long tick lengths
