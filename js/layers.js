@@ -29,8 +29,8 @@ addLayer("s", {
     layerShown(){return true},
     upgrades: {
         11: {
-            title: "Normality",
-            description: "Point gain is multiplied by superpoints/2*2.",
+            title: "Upgraded Points",
+            description: "Point gain is 1.5",
             cost: new Decimal(1),
         },
     }
