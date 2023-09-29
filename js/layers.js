@@ -33,5 +33,10 @@ addLayer("s", {
             description: "Point gain is 1.5",
             cost: new Decimal(1),
         },
+        12: {
+            title: "More Points",
+            description: "Point gain is multiplied by your superpoints",
+            cost: new Decimal(2),
+        },
     }
 })
