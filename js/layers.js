@@ -62,6 +62,11 @@ addLayer("s", {
             title: "Better Points",
             description: "Point gain is multiplied by 2",
             cost: new Decimal(15),
-        }
+        },
+        15: {
+            title: "Continue",
+            description: "Point gain is multiplied by 5",
+            cost: new Decimal(200),
+        },
     }
 })
