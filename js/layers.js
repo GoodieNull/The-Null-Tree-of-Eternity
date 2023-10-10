@@ -68,5 +68,12 @@ addLayer("s", {
             description: "Point gain is multiplied by 5",
             cost: new Decimal(200),
         },
+    },
+    achievements: {
+        11: {
+            name: "The Beggining",
+            tooltip: "Get 1000 Points"
+        },
+        if: "points" >= 1000, 
     }
 })
