@@ -46,7 +46,7 @@ function getPointGen() {
     if (hasUpgrade('s', 11)) gain = gain.times(1.5),
 	effect(); {
         return player[this.layer].points.add(1).pow(0.5)
-    }
+    },
     effectDisplay(); { return format(upgradeEffect(this.layer, this.id))+"superpoints" } // Add formatting to the effect
 	if (hasUpgrade('s', 12)) gain = gain.times(upgradeEffect('s', 12))
 	return gain
