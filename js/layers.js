@@ -19,18 +19,16 @@ addLayer("s", {
         return mult
     },
     
+    gainExp() { // Calculate the exponent on main currency from bonuses
+        return new Decimal(1)
+    },
+    
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
         {key: "S", description: "S: Reset for superpoints", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
-    effect() {
-        return player[this.layer].points.add(1).pow(0.5)
-    },
-    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-    gainExp() { // Calculate the exponent on main currency from bonuses
-        return new Decimal(1)
-    },
+    
     upgrades: {
         11: {
             title: "Upgraded Points",
@@ -41,7 +39,10 @@ addLayer("s", {
             title: "More Points",
             description: "Point gain is multiplied by your superpoints",
             cost: new Decimal(2), 
-            
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
     }
 })
