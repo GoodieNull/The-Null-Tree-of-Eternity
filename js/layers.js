@@ -44,5 +44,18 @@ addLayer("s", {
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
+        13: {
+            title: "Crazy Points",
+            description: "Superpoints is boosted by your points. So it's a loop",
+            cost: new Decimal(5), 
+            effect() {
+                return player.points.add(1).pow(0.15)
+            },
+            gainMult() {
+                let mult = new Decimal(1)
+                if (hasUpgrade('s', 13)) mult = mult.times(upgradeEffect('s', 13))
+                return mult
+            },
+        },
     }
 })
