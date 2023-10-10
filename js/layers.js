@@ -18,6 +18,11 @@ addLayer("s", {
         mult = new Decimal(1)
         return mult
     },
+    gainMult() {
+        let mult = new Decimal(1)
+        if (hasUpgrade('s', 13)) mult = mult.times(upgradeEffect('s', 13))
+        return mult
+    },
     
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
@@ -51,11 +56,7 @@ addLayer("s", {
             effect() {
                 return player.points.add(1).pow(0.15)
             },
-            gainMult() {
-                let mult = new Decimal(1)
-                if (hasUpgrade('s', 13)) mult = mult.times(upgradeEffect('s', 13))
-                return mult
-            },
+            
         },
     }
 })
