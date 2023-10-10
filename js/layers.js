@@ -21,7 +21,7 @@ addLayer("s", {
     effect() {
         return player[this.layer].points.add(1).pow(0.5)
     },
-    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+100000 }, // Add formatting to the effect
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"points" }, // Add formatting to the effect
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
     },
