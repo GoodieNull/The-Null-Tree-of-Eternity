@@ -51,7 +51,7 @@ addLayer("s", {
         },
         13: {
             title: "Crazy Points",
-            description: "Superpoints is boosted by your points. So it's a loop",
+            description: "Superpoints is boosted by your points.",
             cost: new Decimal(5), 
             effect() {
                 return player.points.add(1).pow(0.15)
