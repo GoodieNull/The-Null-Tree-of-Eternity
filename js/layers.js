@@ -79,5 +79,11 @@ addLayer("s", {
 
         
     },
-    
+    achievements: {
+        11: {
+            name: "Super Point Power",
+            more: "This will just multiply Point gain by 1.5"
+        },
+        etc
+    }
 })
