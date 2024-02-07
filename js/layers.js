@@ -21,6 +21,7 @@ addLayer("s", {
     gainMult() {
         let mult = new Decimal(1)
         if (hasUpgrade('s', 13)) mult = mult.times(upgradeEffect('s', 13))
+        if (hasUpgrade('s', 21)) mult = mult.times(5)
         return mult
     },
     
@@ -67,7 +68,14 @@ addLayer("s", {
             title: "Continue",
             description: "Point gain is multiplied by 5",
             cost: new Decimal(200),
+        },      
+        21: {
+            title: "5 Each",
+            description: "Point gain and Super Point Gain is multiplied by 5",
+            cost: new Decimal(300),
         },
+
+        
     },
     
 })
