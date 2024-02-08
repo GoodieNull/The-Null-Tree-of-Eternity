@@ -22,6 +22,7 @@ addLayer("s", {
         let mult = new Decimal(1)
         if (hasUpgrade('s', 13)) mult = mult.times(upgradeEffect('s', 13))
         if (hasUpgrade('s', 21)) mult = mult.times(5)
+        if (hasAchievement('s', 11)) mult = mult.times(1.5)
         return mult
     },
     
@@ -82,8 +83,10 @@ addLayer("s", {
     achievements: {
         11: {
             name: "Super Point Power",
-            more: "This will just multiply Point gain by 1.5"
+            tooltip: "Multiplies Points and Super Points by 1.5"
+            
         },
+        
         
     }
 })
