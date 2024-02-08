@@ -83,7 +83,7 @@ addLayer("s", {
     achievements: {
         11: {
             name: "Super Point Power",
-            tooltip: "Multiplies Points and Super Points by 1.5"
+            tooltip: "Multiplies Points and Super Points by 1.5",
             
         },
         
