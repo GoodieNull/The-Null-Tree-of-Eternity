@@ -48,7 +48,7 @@ function getPointGen() {
 	if (hasUpgrade('s', 14)) gain = gain.times(3)
 	if (hasUpgrade('s', 15)) gain = gain.times(5)
 	if (hasUpgrade('s', 21)) gain = gain.times(5) 
-	if (hasMilestone('s', 11)) gain = gain.times(1.5)
+	if (hasAchievement('s', 11)) gain = gain.times(1.5)
 	return gain
 }
 
