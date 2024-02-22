@@ -85,6 +85,7 @@ addLayer("s", {
             name: "Super Point Power",
             tooltip: "Multiplies Points and Super Points by 1.5",
             
+            
         },
         
         
