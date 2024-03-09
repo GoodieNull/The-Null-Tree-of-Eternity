@@ -115,11 +115,14 @@ addLayer("p", {
         upgrades: {
             11: {
                 title: "Prestige power",
-                description: "Prestige power",
+                description: "Boosts Points by Prestige",
                 cost: new Decimal(5),
                 
             },
-            etc
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"2" },
         }
     },
 })
