@@ -117,12 +117,12 @@ addLayer("p", {
                 title: "Prestige power",
                 description: "Boosts Points by Prestige",
                 cost: new Decimal(5),
-                
+                effect() {
+                    return player[this.layer].points.add(1).pow(0.5)
+                },
+                effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"2" },
             },
-            effect() {
-                return player[this.layer].points.add(1).pow(0.5)
-            },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"2" },
+
         }
     },
 })
