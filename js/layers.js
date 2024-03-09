@@ -31,7 +31,7 @@ addLayer("s", {
     
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "S", description: "S: Reset for superpoints", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "s", description: "S: Reset for superpoints", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
     
@@ -109,7 +109,7 @@ addLayer("p", {
         return new Decimal(1)
     },
     hotkeys: [
-        {key: "P", description: "P: Reset for Prestige Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "p", description: "P: Reset for Prestige Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown() { return true },          // Returns a bool for if this layer's node should be visible in the tree.
 
