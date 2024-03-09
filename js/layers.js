@@ -108,7 +108,9 @@ addLayer("p", {
     gainExp() {                             // Returns the exponent to your gain of the prestige resource.
         return new Decimal(1)
     },
-
+    hotkeys: [
+        {key: "P", description: "P: Reset for Prestige Points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+    ],
     layerShown() { return true },          // Returns a bool for if this layer's node should be visible in the tree.
 
     upgrades: {
