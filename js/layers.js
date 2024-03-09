@@ -112,7 +112,6 @@ addLayer("p", {
     layerShown() { return true },          // Returns a bool for if this layer's node should be visible in the tree.
 
     upgrades: {
-        upgrades: {
             11: {
                 title: "Prestige power",
                 description: "Boosts Points by Prestige",
@@ -122,7 +121,5 @@ addLayer("p", {
                 },
                 effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
             },
-
-        }
     },
 })
